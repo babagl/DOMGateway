@@ -1,0 +1,24 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: gateway
+
+#   cloud:
+#     gateway:
+#       routes:
+#         - id: patient-service
+#           uri: lb://PATIENT-SERVICE
+#           predicates:
+#             - Path=/patients/**
+#         - id: prescription-service
+#           uri: lb://PRESCRIPTION-SERVICE
+#           predicates:
+#             - Path=/prescriptions/**
+#         # Ajoutez d'autres routes ici
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
